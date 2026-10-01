@@ -15,9 +15,9 @@ export default function LandingPage() {
   useEffect(() => { document.title = 'Module — QR Atelier'; }, []);
 
   return (
-    <div className="theme-dark bg-void text-ink">
+    <div className="bg-void text-ink">
       <LandingNav />
-      <main className="relative z-10 mb-[92svh] overflow-clip rounded-b-[2rem] bg-void shadow-[0_50px_100px_rgba(0,0,0,0.7)] md:rounded-b-[3rem]">
+      <main className="relative z-10 mb-[92svh] overflow-clip rounded-b-[2rem] bg-void shadow-[0_40px_90px_-20px_rgba(60,64,67,0.18)] md:rounded-b-[3rem]">
         <Hero />
         <TypesMarquee />
         <FormatsSection />

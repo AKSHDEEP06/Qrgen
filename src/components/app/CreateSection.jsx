@@ -1,8 +1,8 @@
 import React, { useMemo, useRef } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import QRForm from '@/components/app/QRForm';
 import QRPreview from '@/components/app/QRPreview';
 import Customizer from '@/components/app/Customizer';
+import CustomizerDrawer from '@/components/app/CustomizerDrawer';
 import MobileSheet from '@/components/app/MobileSheet';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import { generateMatrix } from '@/services/qrService';
@@ -32,24 +32,15 @@ export default function CreateSection({ qr, deck, setDeck, actions, isFavorite, 
     else if (!err && !isDesktop) scrollTo(previewRef);
   };
   const editContent = () => { setDeck('content'); if (!isDesktop) scrollTo(formRef); };
-  const customize = () => { setDeck('customize'); if (!isDesktop) scrollTo(previewRef); };
+  const customize = () => setDeck('customize');
+  const closeCustomizer = () => { qr.commit(); setDeck('content'); };
 
-  const customizer = <Customizer qr={qr} matrix={qrState.matrix} onDone={() => setDeck('content')} notify={notify} />;
+  const customizer = <Customizer qr={qr} matrix={qrState.matrix} onDone={closeCustomizer} notify={notify} />;
 
   return (
     <div className="lg:grid lg:min-h-[calc(100svh-4rem)] lg:grid-cols-[minmax(380px,460px)_1fr]">
       <aside ref={formRef} className="scroll-mt-16 border-b border-carbon lg:border-b-0 lg:border-r">
-        <AnimatePresence mode="wait">
-          {deck === 'customize' && isDesktop ? (
-            <motion.div key="customize" initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ type: 'spring', stiffness: 300, damping: 30 }}>
-              {customizer}
-            </motion.div>
-          ) : (
-            <motion.div key="form" initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ type: 'spring', stiffness: 300, damping: 30 }}>
-              <QRForm qr={qr} onGenerate={handleGenerate} />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <QRForm qr={qr} onGenerate={handleGenerate} />
       </aside>
       <section ref={previewRef} className="scroll-mt-16">
         <QRPreview
@@ -65,7 +56,11 @@ export default function CreateSection({ qr, deck, setDeck, actions, isFavorite, 
           onCustomize={customize}
         />
       </section>
-      {!isDesktop && <MobileSheet open={deck === 'customize'} onClose={() => { qr.commit(); setDeck('content'); }}>{customizer}</MobileSheet>}
+      {isDesktop ? (
+        <CustomizerDrawer open={deck === 'customize'} onClose={closeCustomizer}>{customizer}</CustomizerDrawer>
+      ) : (
+        <MobileSheet open={deck === 'customize'} onClose={closeCustomizer}>{customizer}</MobileSheet>
+      )}
     </div>
   );
 }
