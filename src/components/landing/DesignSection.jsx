@@ -10,10 +10,11 @@ import { generateMatrix } from '@/services/qrService';
 import { defaultCustomization } from '@/hooks/useQRProject';
 
 const PALETTES = [
-  { name: 'Obsidian', fg: '#0B0B0C', bg: '#F0F0F2', g: '#4E4E52' },
-  { name: 'Volt', fg: '#080808', bg: '#C1FF00', g: '#2E3B00' },
-  { name: 'Tide', fg: '#0B2545', bg: '#EEF4ED', g: '#3E7CB1' },
-  { name: 'Ember', fg: '#5E1500', bg: '#FFF4EC', g: '#E0592A' },
+  { name: 'Obsidian', fg: '#202124', bg: '#F8F9FB', g: '#5F6368' },
+  { name: 'Azure', fg: '#1A73E8', bg: '#F6FAFF', g: '#4285F4' },
+  { name: 'Coral', fg: '#C5221F', bg: '#FFF1EF', g: '#EA4335' },
+  { name: 'Saffron', fg: '#B45309', bg: '#FFF8E7', g: '#F9AB00' },
+  { name: 'Verdant', fg: '#1E7E34', bg: '#F1FAF3', g: '#34A853' },
 ];
 const STYLES = ['square', 'rounded', 'dot'];
 

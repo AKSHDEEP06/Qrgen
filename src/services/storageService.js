@@ -6,7 +6,7 @@ const STORES = ['recents', 'favorites', 'downloads', 'meta'];
 const MAX_RECENTS = 20;
 const SETTINGS_KEY = 'module.settings';
 const COUNTER_KEY = 'module.autoNameCounter';
-const DEFAULT_SETTINGS = { theme: 'dark', downloadFormat: 'png' };
+const DEFAULT_SETTINGS = { theme: 'light', downloadFormat: 'png' };
 
 let dbPromise = null;
 

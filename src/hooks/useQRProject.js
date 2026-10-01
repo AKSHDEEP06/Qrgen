@@ -9,7 +9,7 @@ const HISTORY_LIMIT = 100;
 export const defaultCustomization = () => ({
   foregroundColor: '#0B0B0C',
   backgroundColor: '#FFFFFF',
-  gradient: { enabled: false, type: 'linear', color: '#3F5200', angle: 45 },
+  gradient: { enabled: false, type: 'linear', color: '#1A73E8', angle: 45 },
   size: 1024,
   margin: 4,
   errorCorrection: 'M',

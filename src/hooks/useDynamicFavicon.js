@@ -10,9 +10,9 @@ export default function useDynamicFavicon(seed) {
     const canvas = document.createElement('canvas');
     canvas.width = canvas.height = (matrix.length + pad * 2) * scale;
     const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#080808';
+    ctx.fillStyle = '#FFFFFF';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#C1FF00';
+    ctx.fillStyle = '#1A73E8';
     matrix.forEach((row, y) => row.forEach((on, x) => {
       if (on) ctx.fillRect((x + pad) * scale, (y + pad) * scale, scale, scale);
     }));

@@ -6,70 +6,115 @@
 
 @layer base {
   :root {
-    --background: 0 0% 3%;
-    --foreground: 240 5% 95%;
-    --card: 0 0% 6%;
-    --card-foreground: 240 5% 95%;
-    --popover: 0 0% 6%;
-    --popover-foreground: 240 5% 95%;
-    --primary: 75 100% 50%;
-    --primary-foreground: 0 0% 3%;
-    --secondary: 240 3% 14%;
-    --secondary-foreground: 240 5% 95%;
-    --muted: 240 3% 14%;
-    --muted-foreground: 240 3% 60%;
-    --accent: 240 3% 14%;
-    --accent-foreground: 240 5% 95%;
-    --destructive: 5 90% 62%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3% 14%;
-    --input: 240 3% 14%;
-    --ring: 75 100% 50%;
-    --chart-1: 75 100% 50%;
-    --chart-2: 240 3% 31%;
-    --chart-3: 240 5% 95%;
-    --chart-4: 240 3% 60%;
-    --chart-5: 240 3% 20%;
+    --background: 240 6% 10%;
+    --foreground: 220 14% 96%;
+    --card: 240 6% 13%;
+    --card-foreground: 220 14% 96%;
+    --popover: 240 6% 13%;
+    --popover-foreground: 220 14% 96%;
+    --primary: 213 87% 76%;
+    --primary-foreground: 240 30% 10%;
+    --secondary: 240 6% 16%;
+    --secondary-foreground: 220 14% 96%;
+    --muted: 240 6% 16%;
+    --muted-foreground: 220 9% 65%;
+    --accent: 213 60% 20%;
+    --accent-foreground: 213 87% 76%;
+    --destructive: 4 81% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 213 87% 76%;
+    --chart-1: 213 87% 76%;
+    --chart-2: 4 81% 60%;
+    --chart-3: 251 94% 60%;
+    --chart-4: 52 100% 55%;
+    --chart-5: 142 69% 58%;
     --radius: 0.75rem;
     --font-heading: 'Archivo', ui-sans-serif, system-ui, sans-serif;
     --font-body: 'Geist', ui-sans-serif, system-ui, sans-serif;
     --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
     --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 240 6% 13%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 213 87% 76%;
+    --sidebar-primary-foreground: 240 30% 10%;
+    --sidebar-accent: 240 6% 16%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 240 6% 20%;
+    --sidebar-ring: 213 87% 76%;
   }
 
-  /* Kinetic Precision palette — RGB channels */
+  html.light {
+    --background: 0 0% 100%;
+    --foreground: 220 9% 13%;
+    --card: 220 14% 98%;
+    --card-foreground: 220 9% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 9% 13%;
+    --primary: 213 94% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 9% 13%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 40%;
+    --accent: 213 100% 95%;
+    --accent-foreground: 213 80% 40%;
+    --destructive: 4 81% 56%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 9% 87%;
+    --input: 220 9% 87%;
+    --ring: 213 94% 51%;
+    --chart-1: 213 94% 51%;
+    --chart-2: 4 81% 56%;
+    --chart-3: 251 94% 60%;
+    --chart-4: 52 100% 50%;
+    --chart-5: 142 69% 45%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 9% 13%;
+    --sidebar-primary: 213 94% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 9% 13%;
+    --sidebar-border: 220 9% 87%;
+    --sidebar-ring: 213 94% 51%;
+  }
+
+  /* Kinetic Precision palette — RGB channels (refined, Google-inspired) */
   :root, .theme-dark {
-    --void: 8 8 8;
-    --panel: 15 15 16;
-    --carbon: 34 34 36;
-    --steel: 110 110 116;
-    --mute: 152 152 158;
-    --ink: 240 240 242;
-    --volt: 193 255 0;
-    --on-volt: 8 8 8;
-    --volt-text: 193 255 0;
+    --void: 23 23 27;
+    --panel: 31 31 36;
+    --carbon: 48 48 56;
+    --steel: 120 124 132;
+    --mute: 154 160 168;
+    --ink: 238 240 244;
+    --volt: 138 180 248;
+    --on-volt: 24 28 36;
+    --volt-text: 168 200 255;
     --glass: 255 255 255;
     color-scheme: dark;
   }
 
   html.light {
-    --void: 242 242 238;
-    --panel: 250 250 247;
-    --carbon: 216 216 210;
-    --steel: 128 128 132;
-    --mute: 88 88 94;
-    --ink: 12 12 14;
-    --volt-text: 74 100 0;
+    --void: 255 255 255;
+    --panel: 248 249 251;
+    --carbon: 218 220 224;
+    --steel: 128 134 140;
+    --mute: 95 99 104;
+    --ink: 32 33 36;
+    --volt: 66 133 244;
+    --on-volt: 255 255 255;
+    --volt-text: 26 115 232;
     --glass: 0 0 0;
     color-scheme: light;
+  }
+
+  /* Google-inspired brand accents — consistent across themes */
+  :root {
+    --g-blue: 66 133 244;
+    --g-red: 234 67 53;
+    --g-yellow: 251 188 4;
+    --g-green: 52 168 83;
   }
 
   * {
@@ -91,7 +136,7 @@
 
   ::selection {
     background: rgb(var(--volt));
-    color: #080808;
+    color: rgb(var(--on-volt));
   }
 }
 
@@ -209,6 +254,14 @@
   .decoration-volt { text-decoration-color: rgb(var(--volt)); }
   .from-void\/80 { --tw-gradient-from: rgb(var(--void) / 0.8) var(--tw-gradient-from-position); --tw-gradient-to: rgb(var(--void) / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
   .from-void\/90 { --tw-gradient-from: rgb(var(--void) / 0.9) var(--tw-gradient-from-position); --tw-gradient-to: rgb(var(--void) / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+  .bg-g-blue { background-color: rgb(var(--g-blue)); }
+  .bg-g-red { background-color: rgb(var(--g-red)); }
+  .bg-g-yellow { background-color: rgb(var(--g-yellow)); }
+  .bg-g-green { background-color: rgb(var(--g-green)); }
+  .text-g-blue { color: rgb(var(--g-blue)); }
+  .text-g-red { color: rgb(var(--g-red)); }
+  .text-g-yellow { color: rgb(var(--g-yellow)); }
+  .text-g-green { color: rgb(var(--g-green)); }
 }
 
 /* QR module re-assembly */

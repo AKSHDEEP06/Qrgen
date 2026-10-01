@@ -12,7 +12,7 @@ const linkClass = 'inline-block font-wide text-xl font-bold uppercase transition
 // Fixed behind the page; revealed as the main content slides up like a curtain.
 export default function CurtainFooter() {
   return (
-    <footer className="fixed inset-x-0 bottom-0 z-0 flex h-[92svh] flex-col justify-between overflow-hidden bg-volt px-6 pb-6 pt-24 text-[#080808] md:px-10 md:pb-10">
+    <footer className="fixed inset-x-0 bottom-0 z-0 flex h-[92svh] flex-col justify-between overflow-hidden bg-volt px-6 pb-6 pt-24 text-on-volt md:px-10 md:pb-10">
       <div className="mx-auto grid w-full max-w-[1600px] gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <p className="label-caps">Ready when you are</p>

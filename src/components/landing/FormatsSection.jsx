@@ -15,7 +15,7 @@ const FORMATS = [
 export default function FormatsSection() {
   const previews = useMemo(() => FORMATS.map((f) => svgDataUrl(buildSVGString(
     generateMatrix(f.sample, 'M'),
-    { ...defaultCustomization(), foregroundColor: '#080808', backgroundColor: '#C1FF00', margin: 1, moduleStyle: 'rounded' },
+    { ...defaultCustomization(), foregroundColor: '#1A73E8', backgroundColor: '#FFFFFF', margin: 1, moduleStyle: 'rounded' },
     160,
   ))), []);
 
@@ -44,12 +44,12 @@ export default function FormatsSection() {
               className="group relative overflow-hidden border-b border-carbon"
             >
               <span className="absolute inset-0 origin-bottom scale-y-0 bg-volt transition-transform duration-500 ease-[cubic-bezier(.2,.9,.1,1)] group-hover:scale-y-100" />
-              <div className="relative grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-3 py-8 transition-colors duration-500 group-hover:text-[#080808] md:grid-cols-[80px_1fr_1fr_110px] md:gap-10 md:py-10">
-                <span className="label-caps text-mute group-hover:text-[#080808]">{f.n}</span>
+              <div className="relative grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-3 py-8 transition-colors duration-500 group-hover:text-on-volt md:grid-cols-[80px_1fr_1fr_110px] md:gap-10 md:py-10">
+                <span className="label-caps text-mute group-hover:text-on-volt">{f.n}</span>
                 <h3 className="font-wide text-[clamp(1.75rem,4vw,3.5rem)] font-black uppercase leading-none tracking-tight transition-transform duration-500 group-hover:translate-x-3">{f.name}</h3>
                 <div className="col-span-2 md:col-span-1">
                   <p className="text-lg font-medium">{f.line}</p>
-                  <p className="mt-1 text-mute group-hover:text-[#080808]/70">{f.detail}</p>
+                  <p className="mt-1 text-mute group-hover:text-on-volt/70">{f.detail}</p>
                 </div>
                 <img src={previews[i]} alt="" className="hidden h-24 w-24 justify-self-end rotate-12 scale-50 opacity-0 transition-all duration-500 group-hover:rotate-0 group-hover:scale-100 group-hover:opacity-100 md:block" />
               </div>
