@@ -1,0 +1,7 @@
+node_modules
+dist
+build
+.base44
+.cache
+.tmp
+.DS_Store
