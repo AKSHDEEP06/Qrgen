@@ -28,7 +28,7 @@ export default function HeroQR() {
     >
       <CropMarks className="-inset-5" />
       <TiltCard max={12}>
-        <div className="overflow-hidden rounded-[1.25rem] shadow-[0_60px_120px_-30px_rgba(193,255,0,0.25)]">
+        <div className="overflow-hidden rounded-[1.25rem] shadow-[0_60px_120px_-30px_rgba(66,133,244,0.25)]">
           <QRArt matrix={matrix} customization={c} assembleKey={tpl.id} className="block h-auto w-full" />
         </div>
       </TiltCard>

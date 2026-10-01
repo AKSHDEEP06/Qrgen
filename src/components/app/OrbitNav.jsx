@@ -53,7 +53,7 @@ export default function OrbitNav({ section, onNavigate }) {
             aria-label={open ? 'Close navigation' : 'Open navigation'}
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.06 }}
-            className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-volt text-on-volt shadow-[0_12px_40px_rgba(193,255,0,0.35)]"
+            className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-volt text-on-volt shadow-[0_12px_40px_rgba(66,133,244,0.35)]"
           >
             {!open && <span className="absolute inset-0 animate-ping rounded-full bg-volt opacity-20" />}
             <AnimatePresence mode="wait" initial={false}>

@@ -14,7 +14,7 @@ const PALETTES = [
   { name: 'Azure', fg: '#1A73E8', bg: '#F6FAFF', g: '#4285F4' },
   { name: 'Coral', fg: '#C5221F', bg: '#FFF1EF', g: '#EA4335' },
   { name: 'Saffron', fg: '#B45309', bg: '#FFF8E7', g: '#F9AB00' },
-  { name: 'Verdant', fg: '#1E7E34', bg: '#F1FAF3', g: '#34A853' },
+  { name: 'Slate', fg: '#3C4043', bg: '#F1F3F4', g: '#5F6368' },
 ];
 const STYLES = ['square', 'rounded', 'dot'];
 

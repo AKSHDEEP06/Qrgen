@@ -41,7 +41,7 @@ export default function GridField({ className = '', cell = 36 }) {
         const v = heat[i];
         if (v < 0.01) continue;
         heat[i] = v * 0.95;
-        ctx.fillStyle = `rgba(193,255,0,${v * 0.5})`;
+        ctx.fillStyle = `rgba(66,133,244,${v * 0.5})`;
         ctx.fillRect((i % cols) * cell + inset, Math.floor(i / cols) * cell + inset, cell - inset * 2, cell - inset * 2);
       }
       ctx.strokeStyle = 'rgba(240,240,242,0.05)';

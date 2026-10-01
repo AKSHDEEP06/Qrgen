@@ -17,7 +17,7 @@ export default function EmptyCanvas() {
         ))}
       </div>
       <motion.div
-        className="absolute inset-x-8 h-px bg-volt shadow-[0_0_24px_rgba(193,255,0,0.9)]"
+        className="absolute inset-x-8 h-px bg-volt shadow-[0_0_24px_rgba(66,133,244,0.9)]"
         animate={{ top: ['10%', '90%', '10%'] }}
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
       />
